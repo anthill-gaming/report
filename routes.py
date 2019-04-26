@@ -5,5 +5,5 @@ from . import handlers
 
 
 route_patterns = [
-    url(r'^/upload/(?P<app_name>[^/]+)/(?P<app_version>[^/]+)/?', handlers.UploadReport, name='upload_report'),
+    url(r'^/upload/(?P<app_name>[^/]+)/(?P<app_version>[^/]+)/?', handlers.CreateReportHandler, name='create_report'),
 ]

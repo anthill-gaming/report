@@ -4,5 +4,8 @@ from report.models import Report
 import json
 
 
-class UploadReport(CreatingMixin, ModelFormHandler):
+class CreateReportHandler(CreatingMixin, ModelFormHandler):
     model = Report
+
+    def configure_object(self, form):
+        super().configure_object(form)
