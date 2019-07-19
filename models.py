@@ -4,7 +4,7 @@ from anthill.framework.db import db
 from anthill.framework.utils import timezone
 from anthill.platform.api.internal import InternalAPIMixin
 from anthill.platform.auth import RemoteUser
-from sqlalchemy_utils.types import JSONType, ChoiceType
+from sqlalchemy_utils.types import JSONType, ChoiceType, IPAddressType
 import enum
 
 
@@ -22,6 +22,7 @@ class Report(InternalAPIMixin, db.Model):
     created = db.Column(db.DateTime, default=timezone.now)
     payload = db.Column(JSONType, nullable=False, default={})
     info = db.Column(JSONType, nullable=False, default={})
+    ip_address = db.Column(IPAddressType)
     app_name = db.Column(db.String(64), nullable=False)
     app_version = db.Column(db.String(64), nullable=False)
     category = db.Column(db.String(64), nullable=False)

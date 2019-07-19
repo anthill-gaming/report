@@ -8,5 +8,4 @@ from . import handlers
 
 route_patterns = [
     url(r'^/api/v1', include(rest_routes.route_patterns, namespace='api')),  # for compatibility only
-    url(r'^/upload/(?P<app_name>[^/]+)/(?P<app_version>[^/]+)/?', handlers.CreateReportHandler, name='create_report'),
 ]
