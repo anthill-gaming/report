@@ -1,4 +1,5 @@
 from anthill.platform.api.rest.handlers.edit import CreatingMixin, DetailHandler, ModelFormHandler
+from anthill.platform.api.rest.handlers.list import ListHandler
 from anthill.framework.utils.ip import get_ip
 from report.models import Report
 import json
